@@ -32,7 +32,7 @@
                 </ul> 
                 <!-- adding a login button in navigation bar -->
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginModalToggle">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>      
             </div>
@@ -94,7 +94,7 @@
 
                     <!-- modal added to the button for extra information-->
                     <a role="button" class="btn btn-block nav-link btn-warning"
-                    data-toggle="modal" href="#Reserve">Reserve Table</a>
+                    id="reserveModalToggle">Reserve Table</a>
 
                 </div>
             </div>
@@ -336,6 +336,12 @@
                 $("#carouselButton").children("span").removeClass('fa-play');
                 $("#carouselButton").children("span").addClass('fa-pause');                    
             }
+        });
+        $("#loginModalToggle").click(function(){
+            $("#loginModal").modal('toggle');
+        });
+        $("#reserveModalToggle").click(function(){
+            $("#Reserve").modal('toggle');
         });
     </script>
 
